@@ -1,0 +1,158 @@
+/*去掉各种不必要*/
+*{
+    /*内外边距为0*/
+    margin: 0;
+    padding: 0;
+     /*各种样式为空*/
+    text-decoration: none;
+    list-style:none;
+}
+
+/*logo*/
+.logozhuti{
+    /*设置导航栏的宽*/
+    width: 800px;
+    /*导航栏居中*/
+    margin: auto;
+    /*设置导航条的高 为40px*/
+    height: 40px;
+    background: rgb(173, 3, 3); 
+}
+.logo{
+    width: 30px;/*设置图片的宽度*/
+    height: 30px;/*设置图片的高*/
+    padding: 5px;/* 间距 */
+    /*左浮动，横排排列*/
+    float: left;
+    margin: 0 5px 0 0;
+}
+.logozhuti img{
+    border-radius: 50%
+}
+h3{
+    padding: 5px;
+    color: rgb(255, 255, 255);
+}
+
+/*导航栏*/
+.daoht{
+    /*设置导航栏的宽*/
+    width: 800px;
+    /*导航栏居中*/
+    margin: auto;
+    /*设置导航条的高 为40px*/
+    height: 40px;
+    background: rgb(200, 0, 0); 
+}
+.daohl{
+    /* 核心：弹性布局 */
+    display: flex; 
+    /* 水平居中（关键） */
+    justify-content: center; 
+}
+.daohl a{
+    /*设置导航栏字体颜色*/
+    color: aliceblue;
+    /*让变色背景以块模式来显示*/
+    display: block;
+}
+.daohl a:hover{
+    /*鼠标悬停时背景变色*/
+    background: rgba(235, 230, 212, 0.5);
+}
+.daohx{
+    /*左浮动，横排排列*/
+    float: left;
+    /*设置字的宽和行高*/
+    width: 100px;
+    line-height:40px ;
+    /*水平居中对齐方式*/
+    text-align: center;     
+}
+
+/*主题图片*/
+.photo-container {
+    width: 800px;/*设置图片的宽度*/
+    height: 370px;/*设置图片的高，小于图片的高时，裁剪图片上面的内容*/
+    margin: auto;/*居中*/
+    overflow: hidden;/* 隐藏滑动时超出容器的部分 */
+    position: relative;/* 作为照片绝对定位的参考 */
+}
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* 保持照片比例，不拉伸变形 */
+    position: absolute;
+    top: 0;
+    left: 100%; /* 右→左初始位置 */
+    transition: left 0.6s ease; /* 简化曲线，避免兼容问题 */
+    z-index: 1;
+}
+.photo.active {
+    left: 0;
+    z-index: 2;/* 激活的照片层级更高 */
+}
+.photo.prev {
+    left: -100%; /* 右→左滑出位置 */
+}
+
+/*主题段落*/
+.kuangjia{
+    width: 700px;/*设置图片的宽度*/
+    margin: auto;/*居中*/
+    padding: 20px 50px 20px 50px;
+    background-color: rgba(255, 255, 255, 0.5);/*背景颜色*/
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);/*阴影*/
+}
+.xkuangjia{
+    width: 700px;/*设置的宽度*/
+    height: 200px;
+    margin: auto;/*居中*/
+    border-radius: 10px; /* 设置圆角 10px */
+    background-color: rgba(219, 214, 214, 0.5);/*背景颜色*/ 
+    margin: 20px 0 0 0;
+}
+.zhaopian{
+    display: flex;
+    height: 170px;
+    padding: 30px 10px 0 20px;
+    border-radius: 10px; /* 设置圆角 10px */
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.zhaopian img{
+    width: 150px;/*设置照片的宽度*/
+    height:100px;
+    margin-right: 20px;
+}
+h2{
+    color:brown;
+}
+p{
+    font-size: 15px;/*字体大小*/
+    text-indent: 2em;/*设置首行缩进*/
+    padding-top: 10px;/* 标题与上方的间距 */
+    margin: 0 0 0 15px;
+}
+
+/*名言警句*/
+.myjj{
+    width: 800px;/*宽*/
+    height: 50px;/*高*/
+    margin: auto;/*居中*/
+    background-color: rgb(200, 0, 0);/*背景颜色*/
+}
+.juzi{
+    color: aliceblue;
+    text-align: center;/*文字居中*/ 
+    padding-top: 10px;/* 标题与上方的间距 */
+}
+
+/*免责声明*/
+.yewei{
+    width: 800px;/*宽*/
+    margin: auto;/*居中*/
+    background-color: rgba(32, 32, 29, 0.5);/*背景颜色*/
+}
+.yeweinr{
+    text-align: center;/*居中*/ 
+}
