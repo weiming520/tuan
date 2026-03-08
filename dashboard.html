@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Kali测试 - 后台管理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Monaco", "Consolas", monospace;
+        }
+        body {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding: 50px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #00ff00;
+        }
+        .header .btn {
+            padding: 8px 16px;
+            background: #ff4444;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .header .btn:hover {
+            background: #cc0000;
+        }
+        .container {
+            background: #2d2d2d;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+            max-width: 600px;
+        }
+        .container h2 {
+            color: #00ff00;
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #cccccc;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            background: #3d3d3d;
+            border: 1px solid #00ff00;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #00cc00;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+        .btn {
+            padding: 12px 24px;
+            background: #00ff00;
+            color: #1e1e1e;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #00cc00;
+        }
+        .success-msg {
+            color: #00ff00;
+            margin-top: 15px;
+            display: none;
+        }
+        .tip {
+            margin-top: 30px;
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>后台管理面板</h1>
+        <button class="btn" id="logoutBtn">退出登录</button>
+    </div>
+
+    <div class="container">
+        <h2>修改账号密码</h2>
+        <div class="input-group">
+            <label for="newUsername">新账号</label>
+            <input type="text" id="newUsername" placeholder="输入新账号" required>
+        </div>
+        <div class="input-group">
+            <label for="newPassword">新密码</label>
+            <input type="password" id="newPassword" placeholder="输入新密码" required>
+        </div>
+        <button class="btn" id="saveBtn">保存修改</button>
+        <div class="success-msg" id="successMsg">账号密码修改成功！</div>
+
+        <div class="tip">
+            <p>📌 测试提示：</p>
+            <p>1. 数据存储在浏览器本地（localStorage），刷新页面不会丢失</p>
+            <p>2. 可用于Kali工具（如Hydra、Burp Suite）测试登录爆破</p>
+            <p>3. 初始账号：root，初始密码：kali</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
